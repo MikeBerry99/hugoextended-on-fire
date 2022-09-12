@@ -11,7 +11,8 @@ if [ -z "${FIREBASE_TOKEN}" ]; then
 fi
 
 # Generate hugo site
-hugo
+# commented out to only deploy site
+# hugo
 
 # Deploy it on Firebase
 firebase use --token "${FIREBASE_TOKEN}"
