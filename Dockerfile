@@ -12,11 +12,13 @@ RUN set -x && \
     cd /tmp && \
 
     # Download Hugo
-    wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz -O hugo.tar.gz && \
-    tar xzf hugo.tar.gz && \
-    mv hugo /usr/bin/hugo && \
-    rm -r * && \
-    apk del --purge wget && \
+    # SKIP HUGO DOWNLOAD
+    
+    # wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz -O hugo.tar.gz && \
+    # tar xzf hugo.tar.gz && \
+    # mv hugo /usr/bin/hugo && \
+    # rm -r * && \
+    # apk del --purge wget && \
 
     # Install Firebase Tools
     npm install -g firebase-tools@10.9.2
